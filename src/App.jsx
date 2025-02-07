@@ -1,16 +1,10 @@
-import Card from "./Card"; // Import the Card component
-import { useState } from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import ThemedButton from "./components/ThemedButton";
 
-const App = () => {
-  
-  return (
-    <div className="card-container">
-     
-      <Card title="My Name is Narasimha reddy" rating={5} isCool={true}/>
-      <Card title="Learning"  />
-      <Card title="React" />
-    </div>
-  );
-};
+const App = () => (
+  <ThemeProvider>
+    <ThemedButton />
+  </ThemeProvider>
+);
 
 export default App;
